@@ -1,0 +1,38 @@
+@mixin SECTIONBG {
+    @media (max-width:765px){
+
+            background: url('../images/bg-mobile.svg') no-repeat top;
+        
+    }
+    @media (min-width: 766px){
+            background: url('../images/bg-desktop.svg') no-repeat top;
+            .logo{
+                width:200px;
+            }
+
+            .flex-box{
+                display:flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .section-img{
+                    width:55%;
+                }
+
+                .section-intro{
+                    width:40%;
+                    text-align: left;
+                }
+                .lead{
+                    font-size:1rem;
+                }
+            }
+    }
+
+    @media (min-width:1024px){
+        .large{
+            font-size:2rem;
+        }
+    }
+}
+

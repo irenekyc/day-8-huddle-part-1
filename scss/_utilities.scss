@@ -1,0 +1,65 @@
+//TEXT
+.heading-text{
+    font-family: $heading-font;
+    font-weight:400;
+}
+
+.large{
+    font-size:1.5rem;
+}
+.lead{
+    font-size:1rem;
+}
+.lh-2{
+    line-height: 1.5;
+}
+
+
+//Layout
+.wrapper{
+    padding: 0 12%;
+}
+
+.wrapper-narrow{
+    padding: 0 15%;
+}
+
+@for $i from 1 through 5{
+    .py-#{$i}{padding: 1rem* $i 0}
+}
+@for $i from 1 through 5{
+    .p-#{$i}{padding: 1rem* $i}
+}
+@for $i from 1 through 5{
+    .my-#{$i}{margin: 1rem* $i 0}
+}
+
+@mixin ALIGNCENTER{
+    margin-left:auto;
+    margin-right: auto;
+}
+
+@mixin ALIGNRIGHT{
+    margin-right:0;
+
+}
+
+@mixin BOXSHADOW{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+//button
+
+.btn{
+    text-align:center;
+    cursor:pointer;
+    width:200px;
+    padding: 1rem;
+    border-radius: 36px;
+    &-primary{
+        background: white;
+        color: $primary-color;
+        @include BOXSHADOW
+    }
+    @include ALIGNCENTER;
+}
